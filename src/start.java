@@ -1,3 +1,5 @@
+import apiDataSource.selectPublicAPI;
+
 import java.util.Date;
 //import org.json.*;
 //import javax.print.Doc;
@@ -14,19 +16,12 @@ public class start {
 
         Date2=(Date2/1000);
         Date1=(Date1/1000);	// date in SECUND!
-        SelectPublicAPI MySelect = new SelectPublicAPI();
+        selectPublicAPI MySelect = new selectPublicAPI();
         String MyJSONString = MySelect.SSLconnect(Date1, Date2, currencyPair, command);
 
         System.out.println(MyJSONString);	 // in MyJSONString = result string from Json from API !
 
         //JSONObject obj = new JSONObject();
-
-
-
-
-//		SelectPublicAPItest MySelecttest = new SelectPublicAPItest();
-//		MySelecttest.SSLconnecttest();
-
 
         //ответ потом на АПИ  обработай: http://www.pyflux.com/	Time Series Made Easy
 
